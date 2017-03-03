@@ -17,7 +17,8 @@ namespace Triangle
         double e3;
 
         public Triangle(Point pointA, Point pointB, Point pointC)
-        {
+        {          
+            
             this.pointA = pointA;
             this.pointB = pointB;
             this.pointC = pointC;
@@ -66,7 +67,7 @@ namespace Triangle
             else
                 return false;
         }
-
+         
         //Проверка, не совпадают ли точки в треугольнике
         public bool CoincidePoints(Point[] points)
         {

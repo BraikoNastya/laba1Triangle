@@ -14,10 +14,11 @@ namespace Triangle
             for (int i = 0; i < points.Length; i++)
             {
                 points[i] = new Point(gen.Next(1, 15), gen.Next(1, 15));
+                
                 Console.WriteLine("ваша точка x={0} и y={1}", points[i].GetCoordinateX(), points[i].GetCoordinateY());
             }
-        }
-
+        }       
+        
         static void Main(string[] args)
         {
             double averagePerimeter = 0;
@@ -43,7 +44,13 @@ namespace Triangle
             {
                 RandomCoordinate(points);// генерируем новые точки для каждого треугольника
                 array[i] = new Triangle(points[0], points[1], points[2]);
-            }
+                
+                if (array[i].Points()==true)
+                {
+                    Console.WriteLine("треугольник не существует");
+                                  
+                }                
+           }
             for (int i = 0; i < 10; i++)
             {
                 if (array[i].Right() == true)
